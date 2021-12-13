@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonSave = new System.Windows.Forms.Button();
             this.buttonB = new System.Windows.Forms.Button();
             this.buttonA = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -42,6 +41,8 @@
             this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonInitialState = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +71,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.buttonInitialState);
             this.panel1.Controls.Add(this.buttonSave);
             this.panel1.Controls.Add(this.buttonB);
             this.panel1.Controls.Add(this.buttonA);
@@ -78,20 +80,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 100);
             this.panel1.TabIndex = 1;
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.BackgroundImage = global::WindowsFormsVariant14.Properties.Resources.icons8_save_100;
-            this.buttonSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonSave.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSave.Location = new System.Drawing.Point(703, 3);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(94, 94);
-            this.buttonSave.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.buttonSave, "Сохранить изменения");
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonB
             // 
@@ -117,6 +105,7 @@
             this.buttonA.Text = "A";
             this.toolTip1.SetToolTip(this.buttonA, "Выдать все сведения о владельцах самой распространенной марки автомобиля\r\n");
             this.buttonA.UseVisualStyleBackColor = true;
+            this.buttonA.Click += new System.EventHandler(this.buttonA_Click);
             // 
             // toolTip1
             // 
@@ -169,6 +158,34 @@
             this.Color.HeaderText = "Цвет";
             this.Color.Name = "Color";
             // 
+            // buttonInitialState
+            // 
+            this.buttonInitialState.BackgroundImage = global::WindowsFormsVariant14.Properties.Resources.icons8_reload_100__1_;
+            this.buttonInitialState.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonInitialState.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonInitialState.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonInitialState.Location = new System.Drawing.Point(203, 3);
+            this.buttonInitialState.Name = "buttonInitialState";
+            this.buttonInitialState.Size = new System.Drawing.Size(94, 94);
+            this.buttonInitialState.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.buttonInitialState, "Сбросить все фильтры.");
+            this.buttonInitialState.UseVisualStyleBackColor = true;
+            this.buttonInitialState.Click += new System.EventHandler(this.buttonInitialState_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.BackgroundImage = global::WindowsFormsVariant14.Properties.Resources.icons8_save_100;
+            this.buttonSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSave.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSave.Location = new System.Drawing.Point(703, 3);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(94, 94);
+            this.buttonSave.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.buttonSave, "Сохранить изменения");
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // FormBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +217,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Model;
         private System.Windows.Forms.DataGridViewTextBoxColumn Num;
         private System.Windows.Forms.DataGridViewTextBoxColumn Color;
+        private System.Windows.Forms.Button buttonInitialState;
     }
 }
 

@@ -63,6 +63,26 @@ namespace WindowsFormsVariant14.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_reload_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-reload-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_reload_100__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-reload-100 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_save_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-save-100", resourceCulture);

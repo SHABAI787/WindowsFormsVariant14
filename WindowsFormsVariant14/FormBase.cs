@@ -62,5 +62,34 @@ namespace WindowsFormsVariant14
             streamWriter.Close();
             LoadFile();
         }
+
+        private void buttonA_Click(object sender, EventArgs e)
+        {
+            if(dataGridView1.Rows.Count > 0)
+            {
+                // Группируем по модели, потом сортируем по количеству элементов в каждой группе и выводим группу с максимальным значением элементов
+                string popularModel = dataGridView1.Rows.Cast<DataGridViewRow>().GroupBy(r => r.Cells["Model"]?.Value).OrderBy(g => g.Count()).Last().First().Cells["Model"].Value.ToString();
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    // Если срока относиться к популярной модели то показываем её
+                    if (row.Cells["Model"].Value?.ToString() == popularModel)
+                        row.Visible = true;
+                    else // Иначе если строка не новая то скрываем её
+                    if(!row.IsNewRow)
+                        row.Visible = false;
+                }
+            }
+        }
+
+        private void buttonInitialState_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (!row.IsNewRow)
+                    row.Visible = true;
+            }
+
+            dataGridView1.ClearSelection();
+        }
     }
 }
