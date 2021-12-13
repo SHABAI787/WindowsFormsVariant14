@@ -91,5 +91,20 @@ namespace WindowsFormsVariant14
 
             dataGridView1.ClearSelection();
         }
+
+        private void buttonB_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                // Если цвет машины белый то показываем
+                if (row.Cells["Color"].Value?.ToString().ToUpper() == "БЕЛЫЙ")
+                    row.Visible = true;
+                else // Иначе если строка не новая то скрываем её
+                if (!row.IsNewRow)
+                    row.Visible = false;
+            }
+            // Сортируем по модели 
+            dataGridView1.Sort(dataGridView1.Columns["Model"], ListSortDirection.Ascending);
+        }
     }
 }

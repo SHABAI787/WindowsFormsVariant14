@@ -93,6 +93,7 @@
             this.toolTip1.SetToolTip(this.buttonB, "Упорядочить все сведения о владельцах белых машин в алфавитном порядке марки маши" +
         "н");
             this.buttonB.UseVisualStyleBackColor = true;
+            this.buttonB.Click += new System.EventHandler(this.buttonB_Click);
             // 
             // buttonA
             // 
@@ -174,6 +175,7 @@
             // 
             // buttonSave
             // 
+            this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSave.BackgroundImage = global::WindowsFormsVariant14.Properties.Resources.icons8_save_100;
             this.buttonSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
